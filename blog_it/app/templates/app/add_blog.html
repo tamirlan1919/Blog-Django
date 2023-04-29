@@ -1,0 +1,36 @@
+{% extends 'app/index.html' %}
+
+
+{% block home %}
+{% endblock %}
+
+{% block about %}
+{% endblock %}
+
+{% block projects %}
+{% endblock %}
+
+
+{% block blog %}
+<section class="add_blog">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="novost" class="form-control" placeholder="Новость">
+                    <input type="date" name="date" class="form-control">
+                    <textarea name="text"  placeholder="Decription" id="" cols="30" rows="10"></textarea>
+                    <input type="file" name="file">
+                    <input type="text" name="author" class="form-control" placeholder="autor">
+                    <input type="submit" value="Отправить">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block contact %}
+{% endblock %}
